@@ -285,7 +285,10 @@ function SignatureBuilder(props) {
                       selectElementContents(document.getElementById("tableId"))
                     }
                   >
-                    Copy to clipboard 📝
+                    Copy to clipboard
+                    <span role="img" aria-label="copy emoji">
+                      📝
+                    </span>
                   </button>
                 </div>
               </div>

@@ -188,7 +188,7 @@ function EmailSignatureGrowStrong(props) {
                               }}
                               href={website}
                               target="_blank"
-                              rel="noreferrer"
+                              rel="noopener noreferrer"
                             >
                               {website}
                             </a>
@@ -221,7 +221,7 @@ function EmailSignatureGrowStrong(props) {
                     <a
                       href="https://growstrong.io"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                     >
                       <img
                         src={GROW_STRONG_LOGO}
@@ -255,7 +255,7 @@ function EmailSignatureGrowStrong(props) {
                             <a
                               href={facebookLink}
                               target="_blank"
-                              rel="noreferrer"
+                              rel="noopener noreferrer"
                             >
                               <img
                                 src={FACEBOOK_ICON}
@@ -278,7 +278,7 @@ function EmailSignatureGrowStrong(props) {
                             <a
                               href={twitterLink}
                               target="_blank"
-                              rel="noreferrer"
+                              rel="noopener noreferrer"
                             >
                               <img
                                 src={TWITTER_ICON}
@@ -301,7 +301,7 @@ function EmailSignatureGrowStrong(props) {
                             <a
                               href={instagramLink}
                               target="_blank"
-                              rel="noreferrer"
+                              rel="noopener noreferrer"
                             >
                               <img
                                 src={INSTAGRAM_ICON}
@@ -324,7 +324,7 @@ function EmailSignatureGrowStrong(props) {
                             <a
                               href={linkedInLink}
                               target="_blank"
-                              rel="noreferrer"
+                              rel="noopener noreferrer"
                             >
                               <img
                                 src={LINKEDIN_ICON}
