@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   BACKGROUND_IMAGE_GROW_STRONG_EMAIL,
   GROW_STRONG_LOGO,
