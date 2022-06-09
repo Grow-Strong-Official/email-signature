@@ -167,7 +167,7 @@ jobs:
           FOLDER: build
       - name: Smoke Test
         run: |
-          curl http://grow-strong-official.github.io/email-signature | grep "Email Signature Builder"
+          curl https://grow-strong-official.github.io/email-signature/ | grep "Email Signature Builder"
       - name: Rollback Release
         if: failure() && steps.create_release.outputs.id != ''
         uses: author/action-rollback@stable
