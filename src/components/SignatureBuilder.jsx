@@ -81,7 +81,7 @@ function SignatureBuilder() {
                     </div>
                     <div className="mb-3">
                       <label htmlFor="phone" className="form-label">
-                        Number
+                        Phone number
                       </label>
                       <input
                         type="tel"
