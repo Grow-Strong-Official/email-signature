@@ -1,343 +1,210 @@
 import React from "react";
 
-import {
-  BACKGROUND_IMAGE_GROW_STRONG_EMAIL,
-  GROW_STRONG_LOGO,
-  PHONE_ICON,
-  MAIL_ICON,
-  WEBSITE_ICON,
-  FACEBOOK_ICON,
-  TWITTER_ICON,
-  INSTAGRAM_ICON,
-  LINKEDIN_ICON,
-} from "../data/imagesDataURI";
+const EmailSignatureGrowStrong = ({ fullName, role, phone }) => {
+  const GROW_STRONG_BACKGROUND_COLOR = "#5B5EE1";
 
-function EmailSignatureGrowStrong(props) {
-  const {
-    profilePictureLink,
-    firstName,
-    lastName,
-    role,
-    phoneNumber,
-    email,
-    website,
-    facebookLink,
-    twitterLink,
-    instagramLink,
-    linkedInLink,
-  } = props;
   const tableStyle = {
-    width: "600px",
-    height: "200px",
-    backgroundSize: "cover",
-    backgroundImage: `url(${BACKGROUND_IMAGE_GROW_STRONG_EMAIL})`,
+    display: "table",
+    borderCollapse: "separate",
+    boxSizing: "border-box",
+    textIndent: "initial",
+    borderSpacing: "2px",
+    borderColor: "grey",
   };
-  const iconContainerStyle = {
-    backgroundColor: "#64AC30",
-    width: "28px",
-    height: "28px",
-    borderRadius: "50%",
-    verticalAlign: "middle",
-    textAlign: "center",
-    padding: 0,
+
+  const anchorIconStyle = {
+    marginRight: "10px",
   };
+
   return (
     <table
-      id="tableId"
       style={tableStyle}
+      id="tableId"
       border="0"
       cellPadding="0"
       cellSpacing="0"
     >
       <tbody>
         <tr>
-          <td
-            style={{
-              width: "175px",
-              height: "200px",
-              textAlign: "center",
-              margin: "auto",
-            }}
-          >
+          <td width="170" style={{ padding: "15px", textAlign: "center" }}>
             <img
-              style={{ width: "135px", height: "135px", borderRadius: "50%" }}
-              src={profilePictureLink}
-              alt="profile"
+              width="100"
+              src="https://storage.googleapis.com/msgsndr/KHne5YzKPJwiAWUNMRtG/media/62b22cdba25e8c36ab51bd1b.png"
+              alt="grow strong mark in circle"
+            />
+            <img
+              width="100"
+              src="https://storage.googleapis.com/msgsndr/KHne5YzKPJwiAWUNMRtG/media/62b22cdb002bf7bb5f12273d.png"
+              alt="grow strong"
             />
           </td>
           <td
+            width="300"
+            align="left"
             style={{
-              width: "240px",
-              height: "190px",
-              paddingTop: "10px",
-              verticalAlign: "top",
+              paddingLeft: "15px",
+              borderLeft: "2px solid " + GROW_STRONG_BACKGROUND_COLOR,
+              textAlign: "left",
             }}
           >
-            <table style={{ width: "240px", height: "160px" }}>
+            <table
+              border="0"
+              align="left"
+              cellPadding="0"
+              cellSpacing="0"
+              width="250"
+              style={{ textAlign: "left" }}
+            >
               <tbody>
                 <tr>
-                  <td style={{ textAlign: "start" }}>
-                    <span
-                      style={{
-                        fontSize: "20px",
-                        fontWeight: "bold",
-                        color: "#212529",
-                      }}
-                    >
-                      {firstName}&nbsp;
-                    </span>
-                    <span
-                      style={{
-                        fontSize: "20px",
-                        fontWeight: "bold",
-                        color: "#64ac30",
-                      }}
-                    >
-                      {lastName}
-                    </span>
+                  <td
+                    style={{
+                      textAlign: "left",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {fullName}
                   </td>
                 </tr>
                 <tr>
                   <td
                     style={{
-                      fontSize: "16px",
-                      fontWeight: 500,
-                      color: "#181718",
+                      textAlign: "left",
+                      fontSize: "12px",
+                      paddingTop: "3px",
                     }}
                   >
-                    {role}
+                    {role}, Grow Strong
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    <p
+                  <td
+                    style={{
+                      textAlign: "left",
+                      fontSize: "12px",
+                      paddingTop: "3px",
+                    }}
+                  >
+                    <a
                       style={{
-                        borderBottom: "#64AC30 solid 3px",
-                        width: "130px",
-                        height: "2px",
-                        margin: 0,
+                        textDecoration: "none",
+                        color: "#4F4F4F",
+                        fontSize: "12px",
+                      }}
+                      href={"tel:" + { phone }}
+                    >
+                      {phone}
+                    </a>{" "}
+                    <span style={{ color: GROW_STRONG_BACKGROUND_COLOR }}>
+                      <b>|</b>
+                    </span>{" "}
+                    <a
+                      href="https://growstrong.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        textDecoration: "none",
+                        color: "#4F4F4F",
+                        fontSize: "12px",
                       }}
                     >
-                      &nbsp;
-                    </p>
+                      {" "}
+                      growstrong.io
+                    </a>
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    <table style={{ height: "90px" }}>
-                      <tbody>
-                        <tr>
-                          <td style={iconContainerStyle}>
-                            <img
-                              src={PHONE_ICON}
-                              alt="phone icon"
-                              style={{
-                                width: "13px",
-                              }}
-                            />
-                          </td>
-                          <td>
-                            <a
-                              style={{
-                                fontSize: "11px",
-                                color: "#262527",
-                              }}
-                              href={"tel:" + { phoneNumber }}
-                            >
-                              {phoneNumber}
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style={iconContainerStyle}>
-                            <img
-                              src={MAIL_ICON}
-                              alt="mail icon"
-                              style={{
-                                width: "13px",
-                              }}
-                            />
-                          </td>
-                          <td>
-                            <a
-                              style={{
-                                fontSize: "11px",
-                                color: "#262527",
-                              }}
-                              href={"mailto:" + email}
-                            >
-                              {email}
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style={iconContainerStyle}>
-                            <img
-                              src={WEBSITE_ICON}
-                              alt="web icon"
-                              style={{
-                                width: "13px",
-                              }}
-                            />
-                          </td>
-                          <td>
-                            <a
-                              style={{
-                                fontSize: "11px",
-                                color: "#262527",
-                              }}
-                              href={website}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              {website}
-                            </a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <td
+                    style={{
+                      textAlign: "left",
+                      fontSize: "12px",
+                      paddingTop: "3px",
+                      color: "#999999",
+                    }}
+                  >
+                    <em>
+                      <b>Certification-Driven Development</b>
+                    </em>
                   </td>
                 </tr>
-              </tbody>
-            </table>
-          </td>
-          <td style={{ width: "10px" }}>
-            <p style={{ borderLeft: "#64AC30 solid 3px", height: "115px" }}>
-              &nbsp;
-            </p>
-          </td>
-          <td style={{ width: "175px", height: "200px", textAlign: "center" }}>
-            <table style={{ margin: "auto", height: "10px" }}>
-              <tbody>
                 <tr>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-            <table style={{ margin: "auto" }}>
-              <tbody>
-                <tr>
-                  <td>
-                    <a
-                      href="https://growstrong.io"
+                  <td
+                    style={{
+                      textAlign: "left",
+                      paddingTop: "6px",
+                    }}
+                  >
+                    {/* <a
+                      href=""
+                      style={anchorIconStyle}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <img
-                        src={GROW_STRONG_LOGO}
-                        alt="grow strong logo"
-                        style={{
-                          width: "150px",
-                          margin: "auto",
-                          verticalAlign: "middle",
-                        }}
+                        alt="facebook-f"
+                        height="20"
+                        src={
+                          "https://storage.googleapis.com/msgsndr/KHne5YzKPJwiAWUNMRtG/media/62b1f84fdb38ea01f82ef9c7.png"
+                        }
+                      />
+                    </a> */}
+                    {/* <a
+                      href=""
+                      style={anchorIconStyle}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        alt="twitter"
+                        height="20"
+                        src={
+                          "https://storage.googleapis.com/msgsndr/KHne5YzKPJwiAWUNMRtG/media/62b1f84f76773103b7d146fe.png"
+                        }
+                      />
+                    </a> */}
+                    {/* <a
+                      href=""
+                      style={anchorIconStyle}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        alt="instagram"
+                        height="20"
+                        src={
+                          "https://storage.googleapis.com/msgsndr/KHne5YzKPJwiAWUNMRtG/media/62b1f84fa25e8c065751a5d8.png"
+                        }
+                      />
+                    </a> */}
+                    <a
+                      href="https://www.linkedin.com/company/growstrongio/"
+                      style={anchorIconStyle}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        alt="linked-in"
+                        height="20"
+                        src={
+                          "https://storage.googleapis.com/msgsndr/KHne5YzKPJwiAWUNMRtG/media/62b1f84fa25e8c5a9c51a5d7.png"
+                        }
                       />
                     </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <table style={{ margin: "auto", height: "10px" }}>
-              <tbody>
-                <tr>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-            <table style={{ margin: "auto", width: "140px", height: "28px" }}>
-              <tbody>
-                <tr style={{ height: "28px" }}>
-                  <td>
-                    <table style={{ width: "28px", height: "28px" }}>
-                      <tbody>
-                        <tr>
-                          <td style={iconContainerStyle}>
-                            <a
-                              href={facebookLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <img
-                                src={FACEBOOK_ICON}
-                                alt="facebook"
-                                style={{
-                                  width: "11px",
-                                }}
-                              />
-                            </a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                  <td>
-                    <table style={{ width: "28px", height: "28px" }}>
-                      <tbody>
-                        <tr>
-                          <td style={iconContainerStyle}>
-                            <a
-                              href={twitterLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <img
-                                src={TWITTER_ICON}
-                                alt="phone icon"
-                                style={{
-                                  width: "15px",
-                                }}
-                              />
-                            </a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                  <td>
-                    <table style={{ width: "28px", height: "28px" }}>
-                      <tbody>
-                        <tr>
-                          <td style={iconContainerStyle}>
-                            <a
-                              href={instagramLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <img
-                                src={INSTAGRAM_ICON}
-                                alt="phone icon"
-                                style={{
-                                  width: "15px",
-                                }}
-                              />
-                            </a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                  <td>
-                    <table style={{ width: "28px", height: "28px" }}>
-                      <tbody>
-                        <tr>
-                          <td style={iconContainerStyle}>
-                            <a
-                              href={linkedInLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <img
-                                src={LINKEDIN_ICON}
-                                alt="phone icon"
-                                style={{
-                                  width: "15px",
-                                }}
-                              />
-                            </a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    {/* <a
+                      href=""
+                      style={anchorIconStyle}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        alt="youtube"
+                        width="20"
+                        src={
+                          "https://storage.googleapis.com/msgsndr/KHne5YzKPJwiAWUNMRtG/media/62b1f84fa25e8c2d7251a5d6.png"
+                        }
+                      />
+                    </a> */}
                   </td>
                 </tr>
               </tbody>
@@ -347,6 +214,6 @@ function EmailSignatureGrowStrong(props) {
       </tbody>
     </table>
   );
-}
+};
 
 export default EmailSignatureGrowStrong;

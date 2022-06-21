@@ -112,7 +112,7 @@ function SignatureBuilder() {
                       <a
                         href="https://support.google.com/mail/answer/8395?hl=es&authuser=0"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                       >
                         email instructions
                       </a>
@@ -134,7 +134,12 @@ function SignatureBuilder() {
                     <button
                       id="copyButton"
                       type="button"
-                      className="btn btn-primary"
+                      className="btn"
+                      style={{
+                        color: "#fff",
+                        backgroundColor: "#5B5EE1",
+                        borderColor: "#5B5EE1",
+                      }}
                       onClick={() =>
                         selectElementContents(
                           document.getElementById("tableId")
