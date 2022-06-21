@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "c38b16251697a23ca549",
-    "url": "/email-signature/static/js/main.c38b1625.chunk.js"
+    "revision": "96469b26968d0d0e3866",
+    "url": "/email-signature/static/js/main.96469b26.chunk.js"
   },
   {
     "revision": "8f2f4211b0891106f089",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/email-signature/static/js/runtime~main.3613c752.js"
   },
   {
-    "revision": "7cda9f574125b531c2a33c0fd31bd4df",
+    "revision": "832cbae8b2f79090f5a1d02b07cf11a7",
     "url": "/email-signature/index.html"
   }
 ];
