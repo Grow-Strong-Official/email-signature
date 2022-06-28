@@ -177,7 +177,7 @@ const EmailSignatureGrowStrong = ({ fullName, role, phone }) => {
                         }
                       />
                     </a> */}
-                    <a
+                    {/* <a
                       href="https://www.linkedin.com/company/growstrongio/"
                       style={anchorIconStyle}
                       target="_blank"
@@ -188,6 +188,21 @@ const EmailSignatureGrowStrong = ({ fullName, role, phone }) => {
                         height="20"
                         src={
                           "https://storage.googleapis.com/msgsndr/KHne5YzKPJwiAWUNMRtG/media/62b1f84fa25e8c5a9c51a5d7.png"
+                        }
+                      />
+                    </a> */}
+
+                    <a
+                      href="https://growstrong.io/"
+                      style={anchorIconStyle}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        alt="website"
+                        height="20"
+                        src={
+                          "https://storage.googleapis.com/msgsndr/KHne5YzKPJwiAWUNMRtG/media/62bb51e40a7fe2e63ad08496.png"
                         }
                       />
                     </a>
