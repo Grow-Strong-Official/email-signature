@@ -6,6 +6,7 @@ function SignatureBuilder() {
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
   const [phone, setPhone] = useState("");
+  const [linkedInURL, setLinkedInURL] = useState("");
 
   function selectElementContents(element) {
     var body = document.body,
@@ -93,6 +94,21 @@ function SignatureBuilder() {
                         placeholder="(615) 000-0000"
                       />
                     </div>
+                    <div className="mb-3">
+                      <label htmlFor="linkedInURL" className="form-label">
+                        LinkedIn
+                      </label>
+                      <input
+                        type="url"
+                        className="form-control"
+                        id="linkedInURL"
+                        name="linkedInURL"
+                        pattern="https://.*"
+                        value={linkedInURL}
+                        onChange={(event) => setLinkedInURL(event.target.value)}
+                        placeholder="https://www.linkedin.com/in/user/"
+                      />
+                    </div>
                   </form>
                 </div>
               </div>
@@ -126,6 +142,7 @@ function SignatureBuilder() {
                       fullName={name}
                       role={role}
                       phone={phone}
+                      linkedInURL={linkedInURL}
                     />
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const EmailSignatureGrowStrong = ({ fullName, role, phone }) => {
+const EmailSignatureGrowStrong = ({ fullName, role, phone, linkedInURL }) => {
   const GROW_STRONG_BACKGROUND_COLOR = "#5B5EE1";
 
   const tableStyle = {
@@ -178,20 +178,19 @@ const EmailSignatureGrowStrong = ({ fullName, role, phone }) => {
                       />
                     </a> */}
                     {/* <a
-                      href="https://www.linkedin.com/company/growstrongio/"
+                      href=""
                       style={anchorIconStyle}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <img
-                        alt="linked-in"
-                        height="20"
+                        alt="youtube"
+                        width="20"
                         src={
-                          "https://storage.googleapis.com/msgsndr/KHne5YzKPJwiAWUNMRtG/media/62b1f84fa25e8c5a9c51a5d7.png"
+                          "https://storage.googleapis.com/msgsndr/KHne5YzKPJwiAWUNMRtG/media/62b1f84fa25e8c2d7251a5d6.png"
                         }
                       />
                     </a> */}
-
                     <a
                       href="https://growstrong.io/"
                       style={anchorIconStyle}
@@ -206,20 +205,22 @@ const EmailSignatureGrowStrong = ({ fullName, role, phone }) => {
                         }
                       />
                     </a>
-                    {/* <a
-                      href=""
-                      style={anchorIconStyle}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        alt="youtube"
-                        width="20"
-                        src={
-                          "https://storage.googleapis.com/msgsndr/KHne5YzKPJwiAWUNMRtG/media/62b1f84fa25e8c2d7251a5d6.png"
-                        }
-                      />
-                    </a> */}
+                    {linkedInURL && (
+                      <a
+                        href={linkedInURL}
+                        style={anchorIconStyle}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          alt="linked-in"
+                          height="20"
+                          src={
+                            "https://storage.googleapis.com/msgsndr/KHne5YzKPJwiAWUNMRtG/media/62b1f84fa25e8c5a9c51a5d7.png"
+                          }
+                        />
+                      </a>
+                    )}
                   </td>
                 </tr>
               </tbody>
