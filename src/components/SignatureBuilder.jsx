@@ -96,7 +96,7 @@ function SignatureBuilder() {
                     </div>
                     <div className="mb-3">
                       <label htmlFor="linkedInURL" className="form-label">
-                        LinkedIn
+                        LinkedIn URL
                       </label>
                       <input
                         type="url"
